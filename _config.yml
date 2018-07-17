@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: lLeiyi的博客
 subtitle:
 description:
 keywords:
-author: John Doe
-language:
+author: lLeiyi
+language: zh-Hans
 timezone:
 
 # URL
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: archer
+theme: hexo-theme-next-5.1.2
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -81,22 +81,3 @@ deploy:
   type: git
   repo: git@github.com:lLeiyi/lLeiyi.github.io.git
   branch: master
-
-jsonContent:
-  meta: true
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: true
-    excerpt: false
-    categories: true
-    tags: true
