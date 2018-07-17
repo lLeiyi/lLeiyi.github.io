@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="问题描述 啦啦啦 解决方案 哈哈哈">
+<meta name="description" content="问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。 12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)&amp;#123;    if (pFeatureLayer == null || OI">
 <meta name="keywords" content="ArcEngine,ISelectEvents">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IMap的选择集刷新问题">
 <meta property="og:url" content="http://yoursite.com/2018/07/16/IMap的选择集刷新问题/index.html">
 <meta property="og:site_name" content="lLeiyi的博客">
-<meta property="og:description" content="问题描述 啦啦啦 解决方案 哈哈哈">
+<meta property="og:description" content="问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。 12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)&amp;#123;    if (pFeatureLayer == null || OI">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T16:26:20.586Z">
+<meta property="og:updated_time" content="2018-07-17T14:09:16.087Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IMap的选择集刷新问题">
-<meta name="twitter:description" content="问题描述 啦啦啦 解决方案 哈哈哈">
+<meta name="twitter:description" content="问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。 12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)&amp;#123;    if (pFeatureLayer == null || OI">
 
 
 
@@ -373,8 +373,10 @@
       
 
       
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p> 啦啦啦</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p> 哈哈哈</p>
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><pre><code>通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)</span><br><span class="line">&#123;</span><br><span class="line">    if (pFeatureLayer == null || OIDs == null)</span><br><span class="line">    &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    IFeatureSelection featureSelection = featureLayer as IFeatureSelection;</span><br><span class="line">    if (featureSelection != null)</span><br><span class="line">    &#123;</span><br><span class="line">        IGeoDatabaseBridge2 geoDatabaseBridge2 = new GeoDatabaseHelperClass();</span><br><span class="line">        geoDatabaseBridge2.AddList(featureSelection.SelectionSet, ref OIDs);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><pre><code>可以通过ISelectEvents接口来解决这个问题,该接口可由IMap接口QI。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ISelectionEvents selectEvents = map as ISelectionEvents;</span><br><span class="line">if (selectEvents != null)</span><br><span class="line">&#123;</span><br><span class="line">    selectEvents.SelectionChanged();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
