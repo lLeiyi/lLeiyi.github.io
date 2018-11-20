@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ArcEngine,IFeaturecursor," />
+  <meta name="keywords" content="ArcEngine,IWorkspace," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="问题描述123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;while((feature = featureCursor.NextFeature())!=null)&amp;#123;&amp;#125;  以上是常用的循环遍历的步骤，最后遍历到feature">
-<meta name="keywords" content="ArcEngine,IFeaturecursor">
+<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273    /// &amp;lt;summary&amp;gt;    /// 要素类的转移    /// &amp;lt;/summary&amp;gt;">
+<meta name="keywords" content="ArcEngine,IWorkspace">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题">
-<meta property="og:url" content="http://yoursite.com/2018/11/20/featurecursor分别在sde数据库和gdb数据库下的遍历问题/index.html">
+<meta property="og:title" content="导入导出数据常用的方法s">
+<meta property="og:url" content="http://yoursite.com/2018/11/20/导入导出数据常用的方法/index.html">
 <meta property="og:site_name" content="lLeiyi的博客">
-<meta property="og:description" content="问题描述123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;while((feature = featureCursor.NextFeature())!=null)&amp;#123;&amp;#125;  以上是常用的循环遍历的步骤，最后遍历到feature">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273    /// &amp;lt;summary&amp;gt;    /// 要素类的转移    /// &amp;lt;/summary&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-20T03:27:54.255Z">
+<meta property="og:updated_time" content="2018-11-20T08:54:59.619Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题">
-<meta name="twitter:description" content="问题描述123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;while((feature = featureCursor.NextFeature())!=null)&amp;#123;&amp;#125;  以上是常用的循环遍历的步骤，最后遍历到feature">
+<meta name="twitter:title" content="导入导出数据常用的方法s">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273    /// &amp;lt;summary&amp;gt;    /// 要素类的转移    /// &amp;lt;/summary&amp;gt;">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/20/featurecursor分别在sde数据库和gdb数据库下的遍历问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/20/导入导出数据常用的方法/"/>
 
 
 
 
 
-  <title>ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题 | lLeiyi的博客</title>
+  <title>导入导出数据常用的方法s | lLeiyi的博客</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/20/featurecursor分别在sde数据库和gdb数据库下的遍历问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/20/导入导出数据常用的方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lLeiyi">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题</h1>
+          <h1 class="post-title" itemprop="name headline">导入导出数据常用的方法s</h1>
         
 
         <div class="post-meta">
@@ -302,7 +302,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-20T11:18:42+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-20T16:44:32+08:00">
                 2018-11-20
               </time>
             
@@ -373,9 +373,7 @@
       
 
       
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//一般的循环遍历步骤</span><br><span class="line">IFeatureCursor featureCursor = featureClass.Search(null,false);</span><br><span class="line">IFeature feature = null;</span><br><span class="line">while((feature = featureCursor.NextFeature())!=null)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 以上是常用的循环遍历的步骤，最后遍历到feature为null后退出while循环，这时如果再执行一次featureCursor.NextFeature()语句：<br> 1.在gdb和mdb数据库下会得到null；<br> 2.在sde数据库下会得到“调用的函数顺序有误 [Function called out of sequence]”的报错。</p>
-
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">    /// &lt;summary&gt;</span><br><span class="line">    /// 要素类的转移</span><br><span class="line">    /// &lt;/summary&gt;</span><br><span class="line">    /// &lt;param name=&quot;sourceWorkspace&quot;&gt;源数据工作空间（shp）&lt;/param&gt;</span><br><span class="line">    /// &lt;param name=&quot;targetWorkspace&quot;&gt;目标数据工作空间（mdb）&lt;/param&gt;</span><br><span class="line">    /// &lt;param name=&quot;nameOfSourceFeatureClass&quot;&gt;源要素类名&lt;/param&gt;</span><br><span class="line">    /// &lt;param name=&quot;nameOfTargetFeatureClass&quot;&gt;目标要素类名&lt;/param&gt;</span><br><span class="line">    /// &lt;param name=&quot;queryFilter&quot;&gt;&lt;/param&gt;</span><br><span class="line">    /// &lt;returns&gt;&lt;/returns&gt;</span><br><span class="line">    private bool IFeatureDataConverter_ConvertFeatureClass(IWorkspace sourceWorkspace, IWorkspace targetWorkspace,</span><br><span class="line">string nameOfSourceFeatureClass, string nameOfTargetFeatureClass, IQueryFilter queryFilter)</span><br><span class="line">    &#123;</span><br><span class="line">        //创建一个源数据的工作空间的name</span><br><span class="line">        IDataset sourceWorkspaceDataset = (IDataset)sourceWorkspace;</span><br><span class="line">        IWorkspaceName sourceWorkspaceName = (IWorkspaceName)sourceWorkspaceDataset.FullName;</span><br><span class="line">        //创建源数据Name作为转换参数</span><br><span class="line">        IFeatureClassName sourceFeatureClassName = new FeatureClassNameClass();</span><br><span class="line">        IDatasetName sourceDatasetName = (IDatasetName)sourceFeatureClassName;</span><br><span class="line">        sourceDatasetName.WorkspaceName = sourceWorkspaceName;</span><br><span class="line">        //这个参数不能乱填（shp文件就是文件名没后缀，FeatureClass或者FeatureDataset就是AliasName）  </span><br><span class="line">        sourceDatasetName.Name = nameOfSourceFeatureClass;</span><br><span class="line"></span><br><span class="line">        //创建目标（导出）数据空间的name</span><br><span class="line">        IDataset targetWorkspaceDataset = (IDataset)targetWorkspace;</span><br><span class="line">        IWorkspaceName targetWorkspaceName = (IWorkspaceName)targetWorkspaceDataset.FullName;</span><br><span class="line">        //创建目标数据Name作为转换参数</span><br><span class="line">        IFeatureClassName targetFeatureClassName = new FeatureClassNameClass();</span><br><span class="line">        IDatasetName targetDatasetName = (IDatasetName)targetFeatureClassName;</span><br><span class="line">        targetDatasetName.WorkspaceName = targetWorkspaceName;</span><br><span class="line">        //这个命名也很重要，如果是mdb，那么这个命名在数据库中必须是本来不存在的（当然你可以先清空数据库）</span><br><span class="line">        targetDatasetName.Name = nameOfTargetFeatureClass;</span><br><span class="line">        //根据FetureClassName打开数据</span><br><span class="line">        ESRI.ArcGIS.esriSystem.IName sourceName = (ESRI.ArcGIS.esriSystem.IName)sourceFeatureClassName;</span><br><span class="line">        IFeatureClass sourceFeatureClass = (IFeatureClass)sourceName.Open();</span><br><span class="line"></span><br><span class="line">        //在两个不同的工作空间转换数据要检查字段的有效性</span><br><span class="line">        //一些检查有效性的参数</span><br><span class="line">        IFieldChecker fieldChecker = new FieldCheckerClass();</span><br><span class="line">        IFields targetFeatureClassFields;</span><br><span class="line">        IFields sourceFeatureClassFields = sourceFeatureClass.Fields;</span><br><span class="line">        IEnumFieldError enumFieldError;</span><br><span class="line">        //设置检查有效性的源数据工作空间</span><br><span class="line">        fieldChecker.InputWorkspace = sourceWorkspace;</span><br><span class="line">        fieldChecker.ValidateWorkspace = targetWorkspace;</span><br><span class="line">        //（这个函数没有返回值我不知道它如何确定有效性滴）</span><br><span class="line">        fieldChecker.Validate(sourceFeatureClassFields, out enumFieldError, out targetFeatureClassFields);</span><br><span class="line">        //通过输出字段循环找出几何字段</span><br><span class="line">        IField geometryField;</span><br><span class="line">        //遍历字段  </span><br><span class="line">        for (int i = 0; i &lt; targetFeatureClassFields.FieldCount; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            //找到定义几何要素类型的字段  </span><br><span class="line">            if (targetFeatureClassFields.get_Field(i).Type == esriFieldType.esriFieldTypeGeometry)</span><br><span class="line">            &#123;</span><br><span class="line">                //获取当前字段  </span><br><span class="line">                geometryField = targetFeatureClassFields.get_Field(i);</span><br><span class="line">                //编辑几何要素类型字段  </span><br><span class="line">                IGeometryDef geometryDef = geometryField.GeometryDef;</span><br><span class="line">                IGeometryDefEdit targetFCGeoDefEdit = (IGeometryDefEdit)geometryDef;</span><br><span class="line">                //说实话，下面两行我实在不知道用处。。。参数也是看文档抄袭的  </span><br><span class="line">                targetFCGeoDefEdit.GridCount_2 = 1;</span><br><span class="line">                targetFCGeoDefEdit.set_GridSize(0, 0);</span><br><span class="line">                //保证空间参考      SpatialReference_2属性字段才是可写的，SpatialReference属性只可读  </span><br><span class="line">                targetFCGeoDefEdit.SpatialReference_2 = geometryField.GeometryDef.SpatialReference;</span><br><span class="line">                //开始转换  </span><br><span class="line">                IFeatureDataConverter myConvert = new FeatureDataConverterClass();</span><br><span class="line">                myConvert.ConvertFeatureClass(sourceFeatureClassName, queryFilter, null, targetFeatureClassName, geometryDef, targetFeatureClassFields, &quot;&quot;, 1000, 0);</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -394,7 +392,7 @@
           
             <a href="/tags/ArcEngine/" rel="tag"># ArcEngine</a>
           
-            <a href="/tags/IFeaturecursor/" rel="tag"># IFeaturecursor</a>
+            <a href="/tags/IWorkspace/" rel="tag"># IWorkspace</a>
           
         </div>
       
@@ -407,8 +405,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/19/IWorkspace的创建问题/" rel="next" title="ArcEngine中打开各种数据源（WorkSpace）的连接">
-                <i class="fa fa-chevron-left"></i> ArcEngine中打开各种数据源（WorkSpace）的连接
+              <a href="/2018/11/20/featurecursor分别在sde数据库和gdb数据库下的遍历问题/" rel="next" title="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题">
+                <i class="fa fa-chevron-left"></i> ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题
               </a>
             
           </div>
@@ -416,10 +414,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/20/导入导出数据常用的方法/" rel="prev" title="导入导出数据常用的方法s">
-                导入导出数据常用的方法s <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -471,17 +465,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -543,22 +528,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
