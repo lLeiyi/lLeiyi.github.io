@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ArcEngine,IFeaturecursor," />
 
 
 
@@ -94,14 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="问题描述123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;while((feature = featureCursor.NextFeature())!=null)&amp;#123;&amp;#125;  以上是常用的循环遍历的步骤，最后遍历到feature">
+<meta name="keywords" content="ArcEngine,IFeaturecursor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题">
+<meta property="og:url" content="http://yoursite.com/2018/11/20/featurecursor分别在sde数据库和gdb数据库下的遍历问题/index.html">
 <meta property="og:site_name" content="lLeiyi的博客">
+<meta property="og:description" content="问题描述123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;while((feature = featureCursor.NextFeature())!=null)&amp;#123;&amp;#125;  以上是常用的循环遍历的步骤，最后遍历到feature">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T16:20:54.283Z">
+<meta property="og:updated_time" content="2018-11-20T03:27:54.255Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题">
+<meta name="twitter:description" content="问题描述123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;while((feature = featureCursor.NextFeature())!=null)&amp;#123;&amp;#125;  以上是常用的循环遍历的步骤，最后遍历到feature">
 
 
 
@@ -130,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/20/featurecursor分别在sde数据库和gdb数据库下的遍历问题/"/>
 
 
 
 
 
-  <title>分类 | lLeiyi的博客</title>
+  <title>ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题 | lLeiyi的博客</title>
   
 
 
@@ -257,40 +261,180 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/20/featurecursor分别在sde数据库和gdb数据库下的遍历问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lLeiyi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lLeiyi的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 2 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/记录-踩过的坑/">记录&&踩过的坑</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/记录-踩过的坑/ArcEngine/">ArcEngine</a><span class="category-list-count">3</span></li></ul></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-20T11:18:42+08:00">
+                2018-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/记录-踩过的坑/" itemprop="url" rel="index">
+                    <span itemprop="name">记录&&踩过的坑</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/记录-踩过的坑/ArcEngine/" itemprop="url" rel="index">
+                    <span itemprop="name">ArcEngine</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//一般的循环遍历步骤</span><br><span class="line">IFeatureCursor featureCursor = featureClass.Search(null,false);</span><br><span class="line">IFeature feature = null;</span><br><span class="line">while((feature = featureCursor.NextFeature())!=null)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 以上是常用的循环遍历的步骤，最后遍历到feature为null后退出while循环，这时如果再执行一次featureCursor.NextFeature()语句：<br> 1.在gdb和mdb数据库下会得到null；<br> 2.在sde数据库下会得到“调用的函数顺序有误 [Function called out of sequence]”的报错。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ArcEngine/" rel="tag"># ArcEngine</a>
+          
+            <a href="/tags/IFeaturecursor/" rel="tag"># IFeaturecursor</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/19/IWorkspace的创建问题/" rel="next" title="ArcEngine中打开各种数据源（WorkSpace）的连接">
+                <i class="fa fa-chevron-left"></i> ArcEngine中打开各种数据源（WorkSpace）的连接
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -323,8 +467,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -386,6 +539,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -499,10 +668,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

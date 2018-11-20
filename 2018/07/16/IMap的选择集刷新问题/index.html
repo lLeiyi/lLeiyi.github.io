@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。 12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)&amp;#123;    if (pFeatureLayer == null || OI">
+<meta name="description" content="1.问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。 12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)&amp;#123;    if (pFeatureLayer == null ||">
 <meta name="keywords" content="ArcEngine,ISelectEvents">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IMap的选择集刷新问题">
+<meta property="og:title" content="ArcEngine中IMap的选择集刷新问题">
 <meta property="og:url" content="http://yoursite.com/2018/07/16/IMap的选择集刷新问题/index.html">
 <meta property="og:site_name" content="lLeiyi的博客">
-<meta property="og:description" content="问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。 12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)&amp;#123;    if (pFeatureLayer == null || OI">
+<meta property="og:description" content="1.问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。 12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)&amp;#123;    if (pFeatureLayer == null ||">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-17T14:09:16.087Z">
+<meta property="og:updated_time" content="2018-11-20T03:27:52.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IMap的选择集刷新问题">
-<meta name="twitter:description" content="问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。 12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)&amp;#123;    if (pFeatureLayer == null || OI">
+<meta name="twitter:title" content="ArcEngine中IMap的选择集刷新问题">
+<meta name="twitter:description" content="1.问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。 12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)&amp;#123;    if (pFeatureLayer == null ||">
 
 
 
@@ -140,7 +140,7 @@
 
 
 
-  <title>IMap的选择集刷新问题 | lLeiyi的博客</title>
+  <title>ArcEngine中IMap的选择集刷新问题 | lLeiyi的博客</title>
   
 
 
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">IMap的选择集刷新问题</h1>
+          <h1 class="post-title" itemprop="name headline">ArcEngine中IMap的选择集刷新问题</h1>
         
 
         <div class="post-meta">
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/问题系列/" itemprop="url" rel="index">
-                    <span itemprop="name">问题系列</span>
+                  <a href="/categories/记录-踩过的坑/" itemprop="url" rel="index">
+                    <span itemprop="name">记录&&踩过的坑</span>
                   </a>
                 </span>
 
@@ -336,7 +336,7 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/问题系列/ArcEngine/" itemprop="url" rel="index">
+                  <a href="/categories/记录-踩过的坑/ArcEngine/" itemprop="url" rel="index">
                     <span itemprop="name">ArcEngine</span>
                   </a>
                 </span>
@@ -373,9 +373,9 @@
       
 
       
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><pre><code>通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。
+        <h2 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h2><pre><code>通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)</span><br><span class="line">&#123;</span><br><span class="line">    if (pFeatureLayer == null || OIDs == null)</span><br><span class="line">    &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    IFeatureSelection featureSelection = featureLayer as IFeatureSelection;</span><br><span class="line">    if (featureSelection != null)</span><br><span class="line">    &#123;</span><br><span class="line">        IGeoDatabaseBridge2 geoDatabaseBridge2 = new GeoDatabaseHelperClass();</span><br><span class="line">        geoDatabaseBridge2.AddList(featureSelection.SelectionSet, ref OIDs);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><pre><code>可以通过ISelectEvents接口来解决这个问题,该接口可由IMap接口QI。
+<h2 id="2-通过ISelectEvents接口解决"><a href="#2-通过ISelectEvents接口解决" class="headerlink" title="2.通过ISelectEvents接口解决"></a>2.通过ISelectEvents接口解决</h2><pre><code>可以通过ISelectEvents接口来解决这个问题,该接口可由IMap接口QI。
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ISelectionEvents selectEvents = map as ISelectionEvents;</span><br><span class="line">if (selectEvents != null)</span><br><span class="line">&#123;</span><br><span class="line">    selectEvents.SelectionChanged();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -415,8 +415,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/19/IWorkspace的创建问题/" rel="prev" title="IWorkspace的创建问题">
-                IWorkspace的创建问题 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/19/IWorkspace的创建问题/" rel="prev" title="ArcEngine中打开各种数据源（WorkSpace）的连接">
+                ArcEngine中打开各种数据源（WorkSpace）的连接 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -494,7 +494,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -505,7 +505,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -516,7 +516,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -551,7 +551,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-问题描述"><span class="nav-number">1.</span> <span class="nav-text">1.问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-通过ISelectEvents接口解决"><span class="nav-number">2.</span> <span class="nav-text">2.通过ISelectEvents接口解决</span></a></li></ol></div>
             
 
           </div>

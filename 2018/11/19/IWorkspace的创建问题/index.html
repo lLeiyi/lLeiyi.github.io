@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="如何打开workspace1.创建workspacefactory1234567891011//方式1Type factoryGDBType = Type.GetTypeFromProgID(&amp;quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&amp;quot;);Type factorySDEType = Type.GetTypeFromProgID(&amp;qu">
+<meta name="description" content="1.创建workspacefactory1234567891011//方式1Type factoryGDBType = Type.GetTypeFromProgID(&amp;quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&amp;quot;);Type factorySDEType = Type.GetTypeFromProgID(&amp;quot;esriDataSo">
 <meta name="keywords" content="ArcEngine,IWorkspace">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IWorkspace的创建问题">
+<meta property="og:title" content="ArcEngine中打开各种数据源（WorkSpace）的连接">
 <meta property="og:url" content="http://yoursite.com/2018/11/19/IWorkspace的创建问题/index.html">
 <meta property="og:site_name" content="lLeiyi的博客">
-<meta property="og:description" content="如何打开workspace1.创建workspacefactory1234567891011//方式1Type factoryGDBType = Type.GetTypeFromProgID(&amp;quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&amp;quot;);Type factorySDEType = Type.GetTypeFromProgID(&amp;qu">
+<meta property="og:description" content="1.创建workspacefactory1234567891011//方式1Type factoryGDBType = Type.GetTypeFromProgID(&amp;quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&amp;quot;);Type factorySDEType = Type.GetTypeFromProgID(&amp;quot;esriDataSo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-19T08:03:03.801Z">
+<meta property="og:updated_time" content="2018-11-20T03:27:53.589Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IWorkspace的创建问题">
-<meta name="twitter:description" content="如何打开workspace1.创建workspacefactory1234567891011//方式1Type factoryGDBType = Type.GetTypeFromProgID(&amp;quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&amp;quot;);Type factorySDEType = Type.GetTypeFromProgID(&amp;qu">
+<meta name="twitter:title" content="ArcEngine中打开各种数据源（WorkSpace）的连接">
+<meta name="twitter:description" content="1.创建workspacefactory1234567891011//方式1Type factoryGDBType = Type.GetTypeFromProgID(&amp;quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&amp;quot;);Type factorySDEType = Type.GetTypeFromProgID(&amp;quot;esriDataSo">
 
 
 
@@ -140,7 +140,7 @@
 
 
 
-  <title>IWorkspace的创建问题 | lLeiyi的博客</title>
+  <title>ArcEngine中打开各种数据源（WorkSpace）的连接 | lLeiyi的博客</title>
   
 
 
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">IWorkspace的创建问题</h1>
+          <h1 class="post-title" itemprop="name headline">ArcEngine中打开各种数据源（WorkSpace）的连接</h1>
         
 
         <div class="post-meta">
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/记录/" itemprop="url" rel="index">
-                    <span itemprop="name">记录</span>
+                  <a href="/categories/记录-踩过的坑/" itemprop="url" rel="index">
+                    <span itemprop="name">记录&&踩过的坑</span>
                   </a>
                 </span>
 
@@ -336,7 +336,7 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/记录/ArcEngine/" itemprop="url" rel="index">
+                  <a href="/categories/记录-踩过的坑/ArcEngine/" itemprop="url" rel="index">
                     <span itemprop="name">ArcEngine</span>
                   </a>
                 </span>
@@ -373,9 +373,9 @@
       
 
       
-        <h1 id="如何打开workspace"><a href="#如何打开workspace" class="headerlink" title="如何打开workspace"></a>如何打开workspace</h1><h2 id="1-创建workspacefactory"><a href="#1-创建workspacefactory" class="headerlink" title="1.创建workspacefactory"></a>1.创建workspacefactory</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//方式1</span><br><span class="line">Type factoryGDBType = Type.GetTypeFromProgID(&quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&quot;);</span><br><span class="line">Type factorySDEType = Type.GetTypeFromProgID(&quot;esriDataSourcesGDB.SdeWorkspaceFactory&quot;);</span><br><span class="line">Type factoryMDBType = Type.GetTypeFromProgID(&quot;esriDataSourcesGDB.AccessWorkspaceFactory&quot;);</span><br><span class="line">IWorkspaceFactory workspaceFactory = (IWorkspaceFactory)Activator.CreateInstance(factory***Type);</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------------------------------------</span><br><span class="line">//方式2</span><br><span class="line">IWorkspaceFactory wksGDBFactory = new FileGDBWorkspaceFactoryClass();</span><br><span class="line">IWorkspaceFactory wksSDEFactory = new SdeWorkspaceFactoryClass();</span><br><span class="line">IWorkspaceFactory wksMDBFactory = new AccessWorkspaceFactoryClass();</span><br></pre></td></tr></table></figure>
-<h2 id="2-调用workspacefactory的方法打开"><a href="#2-调用workspacefactory的方法打开" class="headerlink" title="2.调用workspacefactory的方法打开"></a>2.调用workspacefactory的方法打开</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string strDbPath = &quot;&quot;;</span><br><span class="line">IWorkspace wks = wksFactory.OpenFromFile(strDbPath, 0);</span><br></pre></td></tr></table></figure>
-<p>PS：右键数据库文件=》属性=》安全=》对象名称，此处的文件路径有问题，如要选路径可从资源管理器的文件路径复制。</p>
+        <h2 id="1-创建workspacefactory"><a href="#1-创建workspacefactory" class="headerlink" title="1.创建workspacefactory"></a>1.创建workspacefactory</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//方式1</span><br><span class="line">Type factoryGDBType = Type.GetTypeFromProgID(&quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&quot;);</span><br><span class="line">Type factorySDEType = Type.GetTypeFromProgID(&quot;esriDataSourcesGDB.SdeWorkspaceFactory&quot;);</span><br><span class="line">Type factoryMDBType = Type.GetTypeFromProgID(&quot;esriDataSourcesGDB.AccessWorkspaceFactory&quot;);</span><br><span class="line">IWorkspaceFactory workspaceFactory = (IWorkspaceFactory)Activator.CreateInstance(factory***Type);</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------------------------------------</span><br><span class="line">//方式2</span><br><span class="line">IWorkspaceFactory wksGDBFactory = new FileGDBWorkspaceFactoryClass();</span><br><span class="line">IWorkspaceFactory wksSDEFactory = new SdeWorkspaceFactoryClass();</span><br><span class="line">IWorkspaceFactory wksMDBFactory = new AccessWorkspaceFactoryClass();</span><br></pre></td></tr></table></figure>
+<h2 id="2-调用workspacefactory的方法打开"><a href="#2-调用workspacefactory的方法打开" class="headerlink" title="2.调用workspacefactory的方法打开"></a>2.调用workspacefactory的方法打开</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//SDE连接信息</span><br><span class="line">IPropertySet propSet=new PropertySetClass();</span><br><span class="line">propSet.SetProperty(&quot;server&quot;,&quot;服务器机器名&quot; );</span><br><span class="line">propSet.SetProperty(&quot;instance&quot;,&quot;SDE运行的端口号&quot;);</span><br><span class="line">propSet.SetProperty(&quot;user&quot;,&quot;用户名&quot;);</span><br><span class="line">propSet.SetProperty(&quot;password&quot;,&quot;口令&quot; );</span><br><span class="line">propSet.SetProperty(&quot;password&quot;,&quot;口令&quot; );</span><br><span class="line">IWorkspace wks = wksFactory.Open(propSet, 0);</span><br><span class="line"></span><br><span class="line">//MDB,GDB文件路径</span><br><span class="line">string strDbPath = &quot;文件路径&quot;;</span><br><span class="line">IWorkspace wks = wksFactory.OpenFromFile(strDbPath, 0);</span><br></pre></td></tr></table></figure>
+<p>PS：获取MDB，GDB文件路径时要注意，“右键数据库文件=》属性=》安全=》对象名称”，此处的文件路径有问题，如要选路径可从资源管理器的文件路径复制。</p>
 
       
     </div>
@@ -408,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/16/IMap的选择集刷新问题/" rel="next" title="IMap的选择集刷新问题">
-                <i class="fa fa-chevron-left"></i> IMap的选择集刷新问题
+              <a href="/2018/07/16/IMap的选择集刷新问题/" rel="next" title="ArcEngine中IMap的选择集刷新问题">
+                <i class="fa fa-chevron-left"></i> ArcEngine中IMap的选择集刷新问题
               </a>
             
           </div>
@@ -417,6 +417,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/20/featurecursor分别在sde数据库和gdb数据库下的遍历问题/" rel="prev" title="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题">
+                ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -493,7 +497,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -504,7 +508,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -515,7 +519,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -550,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何打开workspace"><span class="nav-number">1.</span> <span class="nav-text">如何打开workspace</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建workspacefactory"><span class="nav-number">1.1.</span> <span class="nav-text">1.创建workspacefactory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-调用workspacefactory的方法打开"><span class="nav-number">1.2.</span> <span class="nav-text">2.调用workspacefactory的方法打开</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建workspacefactory"><span class="nav-number">1.</span> <span class="nav-text">1.创建workspacefactory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-调用workspacefactory的方法打开"><span class="nav-number">2.</span> <span class="nav-text">2.调用workspacefactory的方法打开</span></a></li></ol></div>
             
 
           </div>
