@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="lLeiyi的博客">
 <meta property="og:description" content="问题描述123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;while((feature = featureCursor.NextFeature())!=null)&amp;#123;&amp;#125;  以上是常用的循环遍历的步骤，最后遍历到 featur">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T11:46:53.529Z">
+<meta property="og:updated_time" content="2019-03-05T11:52:02.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题">
 <meta name="twitter:description" content="问题描述123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;while((feature = featureCursor.NextFeature())!=null)&amp;#123;&amp;#125;  以上是常用的循环遍历的步骤，最后遍历到 featur">
@@ -374,7 +374,7 @@
 
       
         <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//一般的循环遍历步骤</span><br><span class="line">IFeatureCursor featureCursor = featureClass.Search(null,false);</span><br><span class="line">IFeature feature = null;</span><br><span class="line">while((feature = featureCursor.NextFeature())!=null)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 以上是常用的循环遍历的步骤，最后遍历到 feature 为 null 后退出 while 循环，这时如果再执行一次 featureCursor.NextFeature() 语句：<br> 1.在 gdb 和 mdb 数据库下会得到 null；<br> 2.在 sde 数据库下会得到“调用的函数顺序有误 [Function called out of sequence]”的报错。</p>
+<p> 以上是常用的循环遍历的步骤，最后遍历到 feature 为 null 后退出 while 循环，这时如果再执行一次 featureCursor.NextFeature() 语句：<br> 1.在 gdb 和 mdb 数据库下会得到 null；<br> 2.在 sde 数据库下会得到「调用的函数顺序有误 [Function called out of sequence]」的报错。</p>
 
       
     </div>
