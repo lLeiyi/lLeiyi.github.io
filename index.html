@@ -374,7 +374,10 @@
       
         
           
-          数据的导入导出是很常见的操作，我之前会采用以下 2 种方法来实现：1.调用 Insert 和 CreateFeatureBuffer 的方式，从源数据读数据后一条条赋属性赋图形的插入，这种方式的一般不会出现什么问题，但是赋属性步骤繁琐，还要注意字段类型，而且执行效率一般。2.调用 gp 工具，这种方
+          数据的导入导出是很常见的操作，我之前会采用以下 2 种方法来实现：
+
+调用 Insert 和 CreateFeatureBuffer 的方式，从源数据读数据后一条条赋属性赋图形的插入，这种方式的一般不会出现什么问题，但是赋属性步骤繁琐，还要注意字段类型，而且执行效率一般。
+调用 gp 工具，这种方式
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -692,7 +695,7 @@
       
         
           
-          1.创建workspacefactory1234567891011//方式1Type factoryGDBType = Type.GetTypeFromProgID(&quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&quot;);Type factor
+          1. 创建workspacefactory1234567891011//方式1Type factoryGDBType = Type.GetTypeFromProgID(&quot;esriDataSourcesGDB.FileGDBWorkspaceFactory&quot;);Type facto
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -851,8 +854,8 @@
       
         
           
-          1.问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。
-12345678910111213public static void SelectFeatures(IFeatureLayer featureLayer, 
+          1.问题描述通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发 AxMapControl 下的 OnSelectionChanged 事件。
+12345678910111213public static void SelectFeatures(IFeatureLayer featureLay
           ...
           <!--noindex-->
           <div class="post-button text-center">
