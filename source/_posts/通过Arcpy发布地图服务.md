@@ -8,15 +8,15 @@ categories:
 ---
 
 
-## 1.发布地图服务的流程
+# 1.发布地图服务的流程
 使用 ArcPy 将地图文档自动发布到 GIS 服务器的流程分为四步：
 * 第一步，运行 CreateMapSDDraft 函数。CreateMapSDDraft 的输出是服务定义草稿 (.sddraft) 文件，服务定义草稿由地图文档、服务器信息和一组服务属性组合而成。
 * 第二步，使用 AnalyzeForSD 函数分析输出的服务定义草稿文件的适用性和潜在性能问题。
 * 第三步，使用 Stage Service 地理处理工具将服务定义草稿转换为完全合并的服务定义 (.sd) 文件。过渡过程会编译成功发布 GIS 资源所需的所有必要信息。如果选择将数据复制到服务器，则将在服务定义草稿阶段添加数据。
 * 最后，使用 上载服务定义地理处理工具上载服务定义文件并将其作为 GIS 服务发布到特定的 GIS 服务器。此步骤将获取服务定义文件、将其复制到服务器、提取所需信息并发布 GIS 资源。
 
-## 2.调用函数参数详解
-####第一步：创建草图文件
+# 2.调用函数参数详解
+##第一步：创建草图文件
 CreateMapSDDraft (map_document, out_sddraft, service_name, {server_type}, {connection_file_path}, {copy_data_to_server}, {folder_name}, {summary}, {tags})
 
 |参数|说明|类型
@@ -31,10 +31,10 @@ CreateMapSDDraft (map_document, out_sddraft, service_name, {server_type}, {conne
 |summary|服务的摘要。|String
 |tags|服务的标签。|String
 
-####第二、三、四步
+##第二、三、四步
 可以直接在arcgis帮助文档内查看，有中文的。
 
-## 3.实现代码
+# 3.实现代码
 下面是一个发布服务的例子，实现的功能是遍历一个文件夹，将文件夹内.mxd结尾的文件都发布上服务器。
 ```python{.line-numbers}
 # -*- coding: utf-8 -*-

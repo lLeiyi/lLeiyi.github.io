@@ -8,7 +8,7 @@ categories:
 - 记录&&踩过的坑
 ---
 
-## 1.创建workspacefactory
+# 1.创建workspacefactory
 ```C#{.line-numbers}
  //方式1
  Type factoryShpType = Type.GetTypeFromProgID("esriDataSourcesFile.ShapefileWorkspaceFactory");//Shp
@@ -26,7 +26,7 @@ categories:
  IWorkspaceFactory wksMdbFactory = new AccessWorkspaceFactoryClass();
  IWorkspaceFactory2 wksRasterFactory = new RasterWorkspaceFactoryClass();
 ```
-## 2.调用workspacefactory的方法打开数据源
+# 2.调用workspacefactory的方法打开数据源
 ```C#{.line-numbers}
  //MDB,GDB,SDE文件路径
  string strDbPath = "文件路径";

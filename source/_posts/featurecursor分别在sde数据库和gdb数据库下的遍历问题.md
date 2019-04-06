@@ -8,7 +8,7 @@ categories:
 - 记录&&踩过的坑
 ---
 
-## 问题描述
+# 问题描述
 ```C#{.line-numbers}
  //一般的循环遍历步骤
  IFeatureCursor featureCursor = featureClass.Search(null,false);

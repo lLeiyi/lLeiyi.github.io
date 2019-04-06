@@ -8,7 +8,7 @@ categories:
 - 记录&&踩过的坑
 ---
 
-## 1.问题描述
+# 1.问题描述
     通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。
 ```C#{.line-numbers}
 public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)
@@ -25,7 +25,7 @@ public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)
     }
 }
 ```
-## 2.通过ISelectEvents接口解决
+# 2.通过ISelectEvents接口解决
     可以通过ISelectEvents接口来解决这个问题,该接口可由IMap接口QI。
 ```C#{.line-numbers}
 ISelectionEvents selectEvents = map as ISelectionEvents;
