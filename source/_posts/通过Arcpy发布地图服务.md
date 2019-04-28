@@ -16,7 +16,7 @@ categories:
 * 最后，使用 上载服务定义地理处理工具上载服务定义文件并将其作为 GIS 服务发布到特定的 GIS 服务器。此步骤将获取服务定义文件、将其复制到服务器、提取所需信息并发布 GIS 资源。
 
 # 2.调用函数参数详解
-##第一步：创建草图文件
+## 第一步：创建草图文件
 CreateMapSDDraft (map_document, out_sddraft, service_name, {server_type}, {connection_file_path}, {copy_data_to_server}, {folder_name}, {summary}, {tags})
 
 |参数|说明|类型
@@ -31,7 +31,7 @@ CreateMapSDDraft (map_document, out_sddraft, service_name, {server_type}, {conne
 |summary|服务的摘要。|String
 |tags|服务的标签。|String
 
-##第二、三、四步
+## 第二、三、四步
 可以直接在arcgis帮助文档内查看，有中文的。
 
 # 3.实现代码
