@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="1.ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题1.1问题描述平常用到的遍历featureclass的语句在gdb、mdb和sde下有些细节需要注意。 123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = nu">
+<meta name="description" content="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题问题描述平常用到的遍历featureclass的语句在gdb、mdb和sde下有些细节需要注意。 123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;wh">
 <meta name="keywords" content="ArcEngine,IFeaturecursor,ISelectEvents">
 <meta property="og:type" content="article">
 <meta property="og:title" content="踩过的坑1">
 <meta property="og:url" content="http://yoursite.com/2019/04/06/踩过的坑1/index.html">
 <meta property="og:site_name" content="lLeiyi的博客">
-<meta property="og:description" content="1.ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题1.1问题描述平常用到的遍历featureclass的语句在gdb、mdb和sde下有些细节需要注意。 123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = nu">
+<meta property="og:description" content="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题问题描述平常用到的遍历featureclass的语句在gdb、mdb和sde下有些细节需要注意。 123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;wh">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-28T16:05:58.399Z">
+<meta property="og:updated_time" content="2019-04-28T16:14:01.425Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="踩过的坑1">
-<meta name="twitter:description" content="1.ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题1.1问题描述平常用到的遍历featureclass的语句在gdb、mdb和sde下有些细节需要注意。 123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = nu">
+<meta name="twitter:description" content="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题问题描述平常用到的遍历featureclass的语句在gdb、mdb和sde下有些细节需要注意。 123456//一般的循环遍历步骤IFeatureCursor featureCursor = featureClass.Search(null,false);IFeature feature = null;wh">
 
 
 
@@ -373,13 +373,13 @@
       
 
       
-        <h1 id="1-ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题"><a href="#1-ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题" class="headerlink" title="1.ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题"></a>1.ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题</h1><h2 id="1-1问题描述"><a href="#1-1问题描述" class="headerlink" title="1.1问题描述"></a>1.1问题描述</h2><pre><code>平常用到的遍历featureclass的语句在gdb、mdb和sde下有些细节需要注意。
+        <h1 id="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题"><a href="#ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题" class="headerlink" title="ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题"></a>ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><pre><code>平常用到的遍历featureclass的语句在gdb、mdb和sde下有些细节需要注意。
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//一般的循环遍历步骤</span><br><span class="line">IFeatureCursor featureCursor = featureClass.Search(null,false);</span><br><span class="line">IFeature feature = null;</span><br><span class="line">while((feature = featureCursor.NextFeature())!=null)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <pre><code>最后遍历到feature为null后退出while循环，这时如果再执行一次featureCursor.NextFeature()语句：
 </code></pre><p> 1.在gdb和mdb数据库下会得到null；<br> 2.在sde数据库下会得到“调用的函数顺序有误 [Function called out of sequence]”的报错。</p>
-<h1 id="2-ArcEngine中IMap的选择集刷新问题"><a href="#2-ArcEngine中IMap的选择集刷新问题" class="headerlink" title="2.ArcEngine中IMap的选择集刷新问题"></a>2.ArcEngine中IMap的选择集刷新问题</h1><h2 id="2-1问题描述"><a href="#2-1问题描述" class="headerlink" title="2.1问题描述"></a>2.1问题描述</h2><pre><code>通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。
+<h1 id="ArcEngine中IMap的选择集刷新问题"><a href="#ArcEngine中IMap的选择集刷新问题" class="headerlink" title="ArcEngine中IMap的选择集刷新问题"></a>ArcEngine中IMap的选择集刷新问题</h1><h2 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h2><pre><code>通过以下方式可以很便捷的往选择集内添加要素，但是却无法触发AxMapControl下的OnSelectionChanged事件。
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static void SelectFeatures(IFeatureLayer featureLayer, int[] OIDs)</span><br><span class="line">&#123;</span><br><span class="line">    if (pFeatureLayer == null || OIDs == null)</span><br><span class="line">    &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    IFeatureSelection featureSelection = featureLayer as IFeatureSelection;</span><br><span class="line">    if (featureSelection != null)</span><br><span class="line">    &#123;</span><br><span class="line">        IGeoDatabaseBridge2 geoDatabaseBridge2 = new GeoDatabaseHelperClass();</span><br><span class="line">        geoDatabaseBridge2.AddList(featureSelection.SelectionSet, ref OIDs);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-2通过ISelectEvents接口解决"><a href="#2-2通过ISelectEvents接口解决" class="headerlink" title="2.2通过ISelectEvents接口解决"></a>2.2通过ISelectEvents接口解决</h2><pre><code>可以通过ISelectEvents接口来解决这个问题,该接口可由IMap接口QI。
+<h2 id="通过ISelectEvents接口解决"><a href="#通过ISelectEvents接口解决" class="headerlink" title="通过ISelectEvents接口解决"></a>通过ISelectEvents接口解决</h2><pre><code>可以通过ISelectEvents接口来解决这个问题,该接口可由IMap接口QI。
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ISelectionEvents selectEvents = map as ISelectionEvents;</span><br><span class="line">if (selectEvents != null)</span><br><span class="line">&#123;</span><br><span class="line">    selectEvents.SelectionChanged();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -556,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题"><span class="nav-number">1.</span> <span class="nav-text">1.ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">1.1问题描述</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-ArcEngine中IMap的选择集刷新问题"><span class="nav-number">2.</span> <span class="nav-text">2.ArcEngine中IMap的选择集刷新问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1问题描述"><span class="nav-number">2.1.</span> <span class="nav-text">2.1问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2通过ISelectEvents接口解决"><span class="nav-number">2.2.</span> <span class="nav-text">2.2通过ISelectEvents接口解决</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题"><span class="nav-number">1.</span> <span class="nav-text">ArcEngine中featurecursor分别在sde数据库和gdb数据库下的遍历问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArcEngine中IMap的选择集刷新问题"><span class="nav-number">2.</span> <span class="nav-text">ArcEngine中IMap的选择集刷新问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述-1"><span class="nav-number">2.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过ISelectEvents接口解决"><span class="nav-number">2.2.</span> <span class="nav-text">通过ISelectEvents接口解决</span></a></li></ol></li></ol></div>
             
 
           </div>
